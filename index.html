@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fangbuch – Angler-Fangbuch für Android</title>
+<meta name="description" content="Dein Fangbuch für unterwegs: Fänge, Wetter, Schonzeiten. Offline, ohne Konto.">
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    --petrol: #0E7C7B;
+    --petrol-dunkel: #024F4E;
+    --text: #1a2224;
+    --gedaempft: #55676a;
+    --linie: #d7e3e3;
+    --grund: #ffffff;
+    --flaeche: #f2f7f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #e6efef;
+      --gedaempft: #9fb5b5;
+      --linie: #244646;
+      --grund: #0f1a1a;
+      --flaeche: #162424;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--grund);
+    color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+  }
+  header {
+    background: linear-gradient(180deg, var(--petrol), var(--petrol-dunkel));
+    color: #fff;
+    padding: 2.4rem 1.5rem;
+  }
+  header .innen { max-width: 46rem; margin: 0 auto; display: flex;
+                  align-items: center; gap: 1rem; }
+  header img { width: 56px; height: 56px; border-radius: 12px; }
+  header p { margin: .2rem 0 0; opacity: .85; font-size: .95rem; }
+  header strong { font-size: 1.35rem; }
+  header a { color: #fff; text-decoration: none; }
+  main { max-width: 46rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  main > h1 { display: none; }
+  h2 { margin: 2.4rem 0 .6rem; font-size: 1.3rem;
+       border-bottom: 1px solid var(--linie); padding-bottom: .35rem; }
+  h3 { margin: 1.6rem 0 .4rem; font-size: 1.05rem; color: var(--gedaempft); }
+  a { color: var(--petrol); }
+  @media (prefers-color-scheme: dark) { a { color: #5fc4c2; } }
+  code { background: var(--flaeche); padding: .1em .35em; border-radius: 4px;
+         font-size: .9em; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0;
+          font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: .55rem .7rem;
+           border-bottom: 1px solid var(--linie); }
+  th { background: var(--flaeche); font-weight: 600; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .3rem 0; }
+  em { color: var(--gedaempft); }
+  footer { max-width: 46rem; margin: 0 auto; padding: 0 1.5rem 3rem;
+           color: var(--gedaempft); font-size: .85rem; }
+  footer a { margin-right: 1rem; }
+
+  /* Produktseite */
+  .anriss { font-size: 1.15rem; color: var(--gedaempft); margin: 0 0 2rem; }
+  .galerie { display: grid; gap: 1rem; margin: 1.5rem 0 2.5rem;
+             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .galerie figure { margin: 0; }
+  .galerie img { width: 100%; border-radius: 14px;
+                 border: 1px solid var(--linie); display: block; }
+  .galerie figcaption { margin-top: .45rem; font-size: .85rem;
+                        color: var(--gedaempft); text-align: center; }
+  .hinweis { background: var(--flaeche); border-left: 3px solid var(--petrol);
+             padding: .9rem 1.1rem; border-radius: 0 8px 8px 0;
+             font-size: .95rem; }
+</style>
+</head>
+<body>
+<header>
+  <div class="innen">
+    <img src="icon.png" alt="">
+    <div>
+      <strong><a href="">Fangbuch</a></strong>
+      <p>Persönliches Angler-Fangbuch</p>
+    </div>
+  </div>
+</header>
+<main>
+<p class="anriss">Dein Fangbuch für unterwegs: Fänge, Wetter, Schonzeiten. Offline, ohne Konto.</p>
+<div class="galerie"><figure><img src="bilder/01-beissindex.jpg" alt="Beißindex mit Begründung" loading="lazy"><figcaption>Beißindex mit Begründung</figcaption></figure><figure><img src="bilder/02-regeln.jpg" alt="Regeln des Bundeslands" loading="lazy"><figcaption>Regeln des Bundeslands</figcaption></figure><figure><img src="bilder/03-faenge.jpg" alt="Die eigene Fangliste" loading="lazy"><figcaption>Die eigene Fangliste</figcaption></figure><figure><img src="bilder/04-fang-detail.jpg" alt="Ein Fang im Detail" loading="lazy"><figcaption>Ein Fang im Detail</figcaption></figure><figure><img src="bilder/06-karte.jpg" alt="Fangorte auf der Karte" loading="lazy"><figcaption>Fangorte auf der Karte</figcaption></figure><figure><img src="bilder/07-analyse.jpg" alt="Auswertung der Fänge" loading="lazy"><figcaption>Auswertung der Fänge</figcaption></figure></div>
+<p>Fangbuch ersetzt das Papier-Fangbuch. Fang fotografieren, Fischart wählen, fertig – GPS-Position, Gewässer, Wetterlage und Mondphase kommen automatisch dazu. Alles bleibt auf deinem Gerät: kein Konto, keine Cloud, keine Werbung, kein Tracking.</p>
+<h2>Fänge erfassen, auch mit nassen Händen</h2>
+<ul><li>Foto aus Kamera oder Galerie, automatisch komprimiert</li><li>55 deutsche Süß- und Salzwasserarten vorinstalliert, eigene Arten anlegbar</li><li>Länge, Gewicht, Köder, Methode, Notiz, „zurückgesetzt“</li><li>Fangzeitpunkt frei wählbar – Nachtragen geht jederzeit</li><li>Köderfische im Schnelleintrag mit Stückzahl, getrennt von den Fängen</li><li>Suchen und Filtern nach Art, Gewässer, Status und Zeitraum</li></ul>
+<h2>Beißindex: lohnt sich der Weg ans Wasser?</h2>
+<p>Ein Wert von 0 bis 100 für deinen Standort, jetzt. Und zwar nachvollziehbar: Jeder Einflussfaktor steht als Begründung daneben – „Luftdruck fällt +18“, „Dämmerungszeit +15“, „starker Wind −10“. Gerechnet wird aus Luftdruck-Tendenz, Wind, Bewölkung, Niederschlag, Dämmerungsfenster und Mondphase.</p>
+<h2>Schonzeiten, Maße und Fangbegrenzungen</h2>
+<p>346 kuratierte Regeln aus den Landesfischereiverordnungen aller 16 Bundesländer, dazu die Gewässerordnungen der Landesanglerverbände. Beim Erfassen warnt die App sofort: Schonzeit, Mindestmaß, Entnahmefenster und Tagesfangbegrenzung – je Art, als geteilte Gruppengrenze und als Gesamtgrenze. Nachschlagen kannst du alles auf der Regeln-Seite.</p>
+<h2>Gewässer und Karte</h2>
+<p>Die App erkennt per OpenStreetMap, an welchem Gewässer du stehst, und fragt nach. Jedes Gewässer bekommt einen Steckbrief mit Typ, amtlicher Nummer, Notizen und allen Fängen. Das Gewässerverzeichnis führt sie so, wie sie im Erlaubnisschein stehen. Auf der Karte liegen alle Fangorte als Foto-Pins.</p>
+<h2>Ansitze</h2>
+<p>Ansitz starten und stoppen oder als Zeitraum nachtragen – auch ohne Fang. Was du währenddessen fängst, ordnet die App dem Ansitz von selbst zu.</p>
+<h2>Auswertung und Rekorde</h2>
+<p>Verteilungen über Druck, Wind, Mond und Tageszeit. Persönliche Rekorde: größter und schwerster Fang, Bestmarken je Art, Erstfang. Die Entnahme-Meldung gibt es als PDF je Fangjahr, nach Gewässer und Art sortiert – zum Ausdrucken oder Weiterschicken.</p>
+<h2>Fischart per Foto erkennen</h2>
+<p>Optional schlägt die App die Art zum Fangfoto vor. Das Modell läuft auf dem Gerät – kein Foto verlässt dein Handy, kein Schlüssel, kein Konto. Die Entscheidung bleibt bei dir.</p>
+<h2>Offline gebaut, nicht offline nachgerüstet</h2>
+<p>Am Wasser gibt es oft kein Netz. Alle Daten liegen in einer lokalen Datenbank. Wetterdaten, die ohne Verbindung fehlen, holt die App später automatisch nach – auch Tage danach. Deinen kompletten Bestand samt Fotos sicherst du als Datei und spielst ihn auf einem anderen Gerät wieder ein. Ohne Cloud.</p>
+<h2>Einstellungen</h2>
+<p>Hell und dunkel, fünf Farbschemata, Deutsch oder Englisch.</p>
+<h2>Datenschutz</h2>
+<p>Kein Konto, keine Registrierung, keine Werbung, keine Analyse-SDKs. Standort und Zeitpunkt gehen ausschließlich an Open-Meteo (Wetter) und OpenStreetMap (Gewässer), damit die App ihre Arbeit tun kann. Fotos bleiben auf dem Gerät.</p>
+<p class="hinweis">Angaben zu Schonzeiten, Maßen und Fangbegrenzungen ohne Gewähr. Es gilt die Gewässerordnung vor Ort.</p>
+</main>
+<footer>
+<a href="datenschutz/">Datenschutzerklärung</a>Wetterdaten von Open-Meteo, Geodaten von OpenStreetMap.
+</footer>
+</body>
+</html>
